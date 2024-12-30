@@ -1,4 +1,4 @@
-theme = Ayu Mirage
+theme = Chalk
 
 font-size = 14
 cursor-style = block
@@ -13,8 +13,9 @@ window-padding-balance = true
 window-save-state = always
 macos-titlebar-style = tabs
 
-background-opacity = 0.85
+background-opacity = 0.9
 
 copy-on-select = clipboard
 
 keybind = global:cmd+grave_accent=toggle_quick_terminal
+
