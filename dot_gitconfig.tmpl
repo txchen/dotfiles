@@ -1,0 +1,24 @@
+[push]
+  default = simple
+[pull]
+  rebase = true
+[color]
+  ui = true
+[user]
+  email = txchendev@gmail.com
+  name = Tianxiang Chen
+[alias]
+  tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short --abbrev=8
+[core]
+  excludesfile = ~/.gitignore_global
+  pager = LESS=FRXK less
+  editor = vim -c 'startinsert'
+[branch]
+  autosetuprebase = always
+[credential]
+{{ if eq .chezmoi.os "darwin" }}
+  helper = osxkeychain
+{{ end }}
+{{ if eq .chezmoi.os "linux" }}
+  helper = cache --timeout=604800
+{{ end }}
