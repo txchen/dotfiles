@@ -24,5 +24,7 @@ alias http='xh'
 
 set -x EDITOR vim
 
-zoxide init fish | source
-
+# if zoxide is installed
+if type -q zoxide
+    zoxide init fish | source
+end
