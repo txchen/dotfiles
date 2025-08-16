@@ -9,7 +9,7 @@ macos-option-as-alt = true
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
-window-padding-balance = true 
+window-padding-balance = true
 window-save-state = always
 macos-titlebar-style = tabs
 
@@ -19,3 +19,4 @@ copy-on-select = clipboard
 
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
+keybind = shift+enter=text:\n
