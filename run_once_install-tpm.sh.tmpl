@@ -13,3 +13,8 @@ else
   rm -rf "${target_dir}"
   git clone "${repo}" "${target_dir}"
 fi
+
+if command -v tmux >/dev/null 2>&1; then
+  tmux start-server >/dev/null 2>&1 || true
+  TMUX_PLUGIN_MANAGER_PATH="$(dirname "${target_dir}")" "${target_dir}/bin/install_plugins" || true
+fi
