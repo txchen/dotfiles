@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+
+url="https://raw.githubusercontent.com/0xhckr/ghostty-shaders/main/cursor_blaze.glsl"
+dest_dir="{{ joinPath .chezmoi.homeDir ".config/ghostty/shaders" }}"
+dest_file="${dest_dir}/cursor_blaze.glsl"
+
+mkdir -p "${dest_dir}"
+curl -fsSL "${url}" -o "${dest_file}"

@@ -1,4 +1,4 @@
-theme = Chalk
+theme = Ayu Mirage
 
 font-size = 14
 cursor-style = block
@@ -20,3 +20,5 @@ copy-on-select = clipboard
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
 keybind = shift+enter=text:\n
+
+custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
