@@ -3,7 +3,7 @@ theme = Ayu Mirage
 font-size = 14
 cursor-style = block
 
-shell-integration-features = no-cursor,sudo,no-title
+shell-integration-features = no-cursor,sudo,no-title,ssh-env,ssh-terminfo
 macos-option-as-alt = true
 
 mouse-hide-while-typing = true
@@ -12,12 +12,20 @@ mouse-scroll-multiplier = 2
 window-padding-balance = true
 window-save-state = always
 macos-titlebar-style = tabs
+window-colorspace = display-p3
 
 background-opacity = 0.9
+background-opacity-cells = true
 
 copy-on-select = clipboard
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
 
 keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-animation-duration = 0.07
+quick-terminal-autohide = true
 
 keybind = shift+enter=text:\n
 
