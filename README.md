@@ -6,6 +6,7 @@
 - [Chezmoi Workflow](#chezmoi-workflow)
 - [Shortcut Summary](#shortcut-summary)
 - [Tmux Shortcuts](#tmux-shortcuts)
+- [Neovim (LazyVim) Shortcuts](#neovim-lazyvim-shortcuts)
 - [Vim Shortcuts](#vim-shortcuts)
 - [Karabiner Shortcuts (macOS)](#karabiner-shortcuts-macos)
 - [Ghostty Shortcuts](#ghostty-shortcuts)
@@ -50,6 +51,7 @@
 ## Shortcut Summary
 
 - tmux: Alt-based pane/window navigation, path-preserving splits, fast copy-mode actions.
+- Neovim (LazyVim): modern defaults with which-key discovery, Snacks picker search, built-in LSP/git/diagnostics flows.
 - Vim: Ctrl+S save flow, F2/F3 toggles, fast split/buffer movement, FZF and ripgrep mappings.
 - Karabiner (macOS): Hyper layer on Caps Lock, browser navigation keys, PC-to-mac shortcut remaps.
 - Ghostty: global quick terminal toggle and Shift+Enter newline.
@@ -71,6 +73,11 @@
 - Copy mode (vi): `v` start selection, `y` copy and exit, `Ctrl+a` line start, `Ctrl+e` line end
 - Status bar markers: active window shows `▶`, windows with activity show `!`
 - Note: `yazi` uses pane + zoom instead of popup due to popup timeout instability in this environment.
+
+## Neovim (LazyVim) Shortcuts
+
+- Dedicated keymap guide: [NEOVIM_SHORTCUTS.md](NEOVIM_SHORTCUTS.md)
+- This repo tracks only your Neovim bootstrap/overlay config; LazyVim/plugin code is fetched by `lazy.nvim` on each machine.
 
 ## Vim Shortcuts
 
@@ -139,6 +146,7 @@
 - `dot_config/fish/`: fish shell configuration and plugins
 - `dot_config/ghostty/`: Ghostty terminal configuration
 - `dot_config/karabiner/`: Karabiner source configuration (macOS only)
+- `dot_config/nvim/`: Neovim (LazyVim) configuration
 - `dot_tmux.conf`: tmux configuration
 - `dot_vimrc`: Vim configuration
 - Template-backed dotfiles live alongside destination paths, for example `dot_gitconfig.tmpl`

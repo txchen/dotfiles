@@ -36,7 +36,8 @@ abbr --add l 'ls -al'
 abbr --add gt 'git tree'
 abbr --add gst 'git status'
 abbr --add gd 'git diff'
-abbr --add http 'xh'
+alias http='xh'
+alias nv='nvim'
 
 set -gx EDITOR vim
 set -gx VISUAL $EDITOR
