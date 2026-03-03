@@ -1,0 +1,19 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+
+karabiner_dir="$HOME/.config/karabiner"
+source_file="$karabiner_dir/konfig.source.mjs"
+
+if [ ! -f "$source_file" ]; then
+  exit 0
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "chezmoi: skip Karabiner generation because node is not installed" >&2
+  exit 0
+fi
+
+cd "$karabiner_dir"
+node ./konfig.source.mjs
+{{ end -}}

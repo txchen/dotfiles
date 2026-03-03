@@ -41,5 +41,17 @@
 
 - `dot_config/fish/`: fish shell configuration and plugins.
 - `dot_config/ghostty/`: Ghostty terminal configuration.
-- `dot_config/karabiner/`: Karabiner-Elements key remapping.
+- `dot_config/karabiner/`: Karabiner-Elements key remapping (macOS only).
 - Template-backed dotfiles live alongside their destination paths (e.g., `dot_gitconfig.tmpl`).
+
+## Karabiner workflow (macOS only)
+
+- Source of truth: `~/.config/karabiner/konfig.source.mjs`
+- Generated output: `~/.config/karabiner/karabiner.json` (not tracked in this repo)
+- Auto-generation: `chezmoi apply` runs `run_after_darwin-generate-karabiner.sh.tmpl` to regenerate `karabiner.json`.
+- Manual regenerate:
+  - `cd ~/.config/karabiner && node konfig.source.mjs`
+- Sync source updates back into chezmoi source:
+  - `chezmoi add ~/.config/karabiner/konfig.source.mjs`
+
+On Linux, Karabiner files are ignored via `.chezmoiignore`.

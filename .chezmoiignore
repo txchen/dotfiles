@@ -9,3 +9,8 @@ README.md
 
 backups/   # ignore the backups folder, but not its contents
 backups/** # ignore the contents of backups folder but not the folder itself
+
+{{ if ne .chezmoi.os "darwin" -}}
+.config/karabiner/
+.config/karabiner/**
+{{ end -}}
