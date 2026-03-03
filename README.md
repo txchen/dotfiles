@@ -9,7 +9,7 @@
 - [Vim Shortcuts](#vim-shortcuts)
 - [Karabiner Shortcuts (macOS)](#karabiner-shortcuts-macos)
 - [Ghostty Shortcuts](#ghostty-shortcuts)
-- [Fish Aliases](#fish-aliases)
+- [Fish Shortcuts and Abbreviations](#fish-shortcuts-and-abbreviations)
 - [Karabiner Workflow (macOS)](#karabiner-workflow-macos)
 - [Repo Layout](#repo-layout)
 
@@ -53,7 +53,7 @@
 - Vim: Ctrl+S save flow, F2/F3 toggles, fast split/buffer movement, FZF and ripgrep mappings.
 - Karabiner (macOS): Hyper layer on Caps Lock, browser navigation keys, PC-to-mac shortcut remaps.
 - Ghostty: global quick terminal toggle and Shift+Enter newline.
-- fish: practical git/navigation aliases.
+- fish: fzf/zoxide shortcuts plus practical git/navigation abbreviations.
 
 ## Tmux Shortcuts
 
@@ -108,7 +108,13 @@
 - Toggle quick terminal (global): `Cmd+grave` (Cmd+`)
 - Insert newline without submitting: `Shift+Enter`
 
-## Fish Aliases
+## Fish Shortcuts and Abbreviations
+
+- History search (fzf): `Ctrl+r`
+- File/folder search in current directory (fzf): `Ctrl+Alt+f`
+- Process search (fzf): `Ctrl+Alt+p`
+- Interactive directory jump (zoxide): `Alt+c`
+- Directory jump commands: `z <query>` and `zi`
 
 - `l` -> `ls -al`
 - `gt` -> `git tree`
