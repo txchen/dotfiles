@@ -35,7 +35,7 @@ This reference matches the Neovim config tracked in this repo (`dot_config/nvim`
 - `<leader>wd`: close current window
 - `<leader>wm`: toggle zoom for current window
 - `<S-h>` / `<S-l>`: previous / next buffer
-- `<A-j>` / `<A-k>`: move line/selection down/up
+- `<C-j>` / `<C-k>`: next/previous split in Neovim; if only one split, jump to next/previous tmux pane
 - `<C-s>`: save file (normal/insert/visual)
 - `<esc>`: clear search highlight
 
