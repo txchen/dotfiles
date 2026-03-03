@@ -37,6 +37,8 @@ This reference matches the Neovim config tracked in this repo (`dot_config/nvim`
 - `<leader>wm`: toggle zoom for current window
 - `<C-j>` / `<C-k>`: next/previous split in Neovim; if only one split, jump to next/previous tmux pane
 - `<C-s>`: save file (normal/insert/visual)
+- `<C-s>` then `<C-s>` quickly (within mapping timeout): save and quit (`:wq`)
+- `<C-q>` then `<C-q>` quickly (within mapping timeout): quit (`:q`)
 - `<esc>`: clear search highlight
 
 ## 4) LSP (Code Intelligence)
