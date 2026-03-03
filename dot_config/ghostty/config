@@ -22,3 +22,5 @@ keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = shift+enter=text:\n
 
 custom-shader = ~/.config/ghostty/shaders/cursor_blaze.glsl
+# Terminal paste via Ctrl+V
+keybind = ctrl+v=paste_from_clipboard
