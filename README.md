@@ -66,8 +66,11 @@
 - Split pane vertically: `Ctrl+b "` or `Ctrl+b -` (inherits current pane path)
 - Enter copy mode: `Ctrl+b Ctrl+k`
 - Paste tmux buffer: `Ctrl+b Ctrl+p`
+- Open lazygit: `Ctrl+b g` (popup)
+- Open yazi: `Ctrl+b y` (fullscreen-like pane via split + zoom)
 - Copy mode (vi): `v` start selection, `y` copy and exit, `Ctrl+a` line start, `Ctrl+e` line end
 - Status bar markers: active window shows `▶`, windows with activity show `!`
+- Note: `yazi` uses pane + zoom instead of popup due to popup timeout instability in this environment.
 
 ## Vim Shortcuts
 
