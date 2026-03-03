@@ -21,6 +21,7 @@ This reference matches the Neovim config tracked in this repo (`dot_config/nvim`
 - `<leader>fc`: open Neovim config files
 - `<leader>fp`: project picker
 - `<leader>,`: buffer list
+- `<S-h>` / `<S-l>`: previous / next buffer (fast buffer switch)
 - `<leader>bd`: delete current buffer
 - `<leader>bo`: delete other buffers
 - `<leader>/` or `<leader>sg`: grep in project
@@ -34,7 +35,6 @@ This reference matches the Neovim config tracked in this repo (`dot_config/nvim`
 - `<leader>-` / `<leader>|`: split below / split right
 - `<leader>wd`: close current window
 - `<leader>wm`: toggle zoom for current window
-- `<S-h>` / `<S-l>`: previous / next buffer
 - `<C-j>` / `<C-k>`: next/previous split in Neovim; if only one split, jump to next/previous tmux pane
 - `<C-s>`: save file (normal/insert/visual)
 - `<esc>`: clear search highlight
