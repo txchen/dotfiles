@@ -2,8 +2,8 @@
 # These values are generated from current preferred settings.
 status is-interactive; or return
 
-set -g _tide_left_items pwd git newline character
-set -g _tide_right_items status cmd_duration context jobs bun node python java ruby time
+set -g _tide_left_items context pwd git newline character
+set -g _tide_right_items status cmd_duration jobs bun node python java ruby time
 set -g tide_aws_bg_color normal
 set -g tide_aws_color FF9900
 set -g tide_aws_icon 
@@ -76,7 +76,7 @@ set -g tide_kubectl_bg_color normal
 set -g tide_kubectl_color 326CE5
 set -g tide_kubectl_icon 󱃾
 set -g tide_left_prompt_frame_enabled false
-set -g tide_left_prompt_items pwd git newline character
+set -g tide_left_prompt_items context pwd git newline character
 set -g tide_left_prompt_prefix ''
 set -g tide_left_prompt_separator_diff_color ' '
 set -g tide_left_prompt_separator_same_color ' '
@@ -118,7 +118,7 @@ set -g tide_python_bg_color normal
 set -g tide_python_color 00AFAF
 set -g tide_python_icon 󰌠
 set -g tide_right_prompt_frame_enabled false
-set -g tide_right_prompt_items status cmd_duration context jobs direnv bun node python rustc java php pulumi ruby go gcloud kubectl distrobox toolbox terraform aws nix_shell crystal elixir zig time
+set -g tide_right_prompt_items status cmd_duration jobs direnv bun node python rustc java php pulumi ruby go gcloud kubectl distrobox toolbox terraform aws nix_shell crystal elixir zig time
 set -g tide_right_prompt_prefix ' '
 set -g tide_right_prompt_separator_diff_color ' '
 set -g tide_right_prompt_separator_same_color ' '
