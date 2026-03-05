@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if ! command -v fish >/dev/null 2>&1; then
+  exit 0
+fi
+
+lock_file="{{ joinPath .chezmoi.homeDir ".config/fish/conf.d/zzz_tide_prompt_lock.fish" }}"
+if [ ! -f "${lock_file}" ]; then
+  exit 0
+fi
+
+tmp_file="$(mktemp)"
+trap 'rm -f "${tmp_file}"' EXIT
+
+# Keep universal vars aligned with locked Tide config.
+# This avoids per-machine drift after plugin updates.
+awk '
+  /^set -g (tide_[A-Za-z0-9_]+|_tide_left_items|_tide_right_items)/ {
+    sub(/^set -g /, "set -U ")
+    print
+  }
+' "${lock_file}" > "${tmp_file}"
+
+if [ ! -s "${tmp_file}" ]; then
+  exit 0
+fi
+
+fish "${tmp_file}"
