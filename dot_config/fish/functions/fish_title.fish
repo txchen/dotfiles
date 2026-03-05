@@ -1,10 +1,9 @@
 function fish_title
     set -l host (prompt_hostname)
-    set -l dir (prompt_pwd)
 
     if set -q SSH_TTY
-        echo "ssh:$host $dir"
+        echo "[$host]"
     else
-        echo "$host $dir"
+        echo "$host "(prompt_pwd)
     end
 end
