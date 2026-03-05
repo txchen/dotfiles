@@ -3,7 +3,7 @@ theme = Ayu Mirage
 font-size = 14
 cursor-style = block
 
-shell-integration-features = no-cursor,sudo,no-title,ssh-env,ssh-terminfo
+shell-integration-features = no-cursor,sudo,ssh-env,ssh-terminfo
 macos-option-as-alt = true
 
 mouse-hide-while-typing = true
