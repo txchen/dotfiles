@@ -5,6 +5,6 @@ function fish_title
     if set -q SSH_TTY
         echo "[$host] $dir"
     else
-        echo "$host $dir"
+        echo "$dir"
     end
 end
