@@ -40,6 +40,11 @@ This reference matches the Neovim config tracked in this repo (`dot_config/nvim`
 - `<C-s>` then `<C-s>` quickly (within mapping timeout): save and quit (`:wq`)
 - `<C-q>` then `<C-q>` quickly (within mapping timeout): quit (`:q`)
 - `<esc>`: clear search highlight
+- `yy` / `dd` / `p`: use Neovim internal registers (do not sync to system clipboard)
+- `<leader>y` (normal/visual): yank selection to system clipboard
+- `<leader>Y` (normal): yank current line to system clipboard
+- `"+p`: paste from system clipboard explicitly
+- `<C-v>` in insert mode: paste from system clipboard via terminal keybind
 
 ## 4) LSP (Code Intelligence)
 

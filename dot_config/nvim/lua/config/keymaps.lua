@@ -13,3 +13,13 @@ vim.keymap.set({ "n", "i", "v" }, "<C-q><C-q>", "<Esc><Cmd>q<CR>", {
   desc = "Quit",
   silent = true,
 })
+
+-- Explicit system clipboard yanks.
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', {
+  desc = "Yank to system clipboard",
+  silent = true,
+})
+vim.keymap.set("n", "<leader>Y", '"+Y', {
+  desc = "Yank line to system clipboard",
+  silent = true,
+})

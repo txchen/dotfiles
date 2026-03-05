@@ -1,0 +1,2 @@
+WRN 2026-03-04T23:12:04.548 ?.20224    server_start:199: Failed to start server: operation not permitted: /var/folders/gg/pg3nxpmn3bzbdsj51thbv3sc0000gn/T/nvim.txchen/Q7ZMQl/nvim.20224.0
+WRN 2026-03-04T23:33:03.505 ?.26934    server_start:199: Failed to start server: operation not permitted: /var/folders/gg/pg3nxpmn3bzbdsj51thbv3sc0000gn/T/nvim.txchen/mQlY39/nvim.26934.0
