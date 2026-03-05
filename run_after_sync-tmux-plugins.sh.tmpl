@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -euo pipefail
+
+repo="https://github.com/tmux-plugins/tpm"
+tpm_dir="{{ joinPath .chezmoi.homeDir ".tmux/plugins/tpm" }}"
+plugins_dir="$(dirname "${tpm_dir}")"
+
+mkdir -p "${plugins_dir}"
+
+if [ ! -d "${tpm_dir}/.git" ]; then
+  if ! command -v git >/dev/null 2>&1; then
+    echo "chezmoi: skip tmux plugin setup because git is not installed" >&2
+    exit 0
+  fi
+  git clone "${repo}" "${tpm_dir}"
+fi
+
+if ! command -v tmux >/dev/null 2>&1; then
+  echo "chezmoi: skip tmux plugin setup because tmux is not installed" >&2
+  exit 0
+fi
+
+# Ensure plugins declared in ~/.tmux.conf are installed (idempotent).
+tmux start-server >/dev/null 2>&1 || true
+if ! TMUX_PLUGIN_MANAGER_PATH="${plugins_dir}" "${tpm_dir}/bin/install_plugins"; then
+  echo "chezmoi: warning: tmux plugin sync failed; run Prefix+I inside tmux to retry" >&2
+fi
