@@ -42,6 +42,11 @@ alias nv='nvim'
 set -gx EDITOR vim
 set -gx VISUAL $EDITOR
 
+# if mise is installed
+if type -q mise
+    mise activate fish | source
+end
+
 # if zoxide is installed
 if type -q zoxide
     zoxide init fish | source
