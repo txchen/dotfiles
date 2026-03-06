@@ -1,29 +1,3 @@
-# Set PATH, MANPATH, etc., for Homebrew (Apple Silicon and Intel macOS)
-set -l brew_prefix
-if test -x /opt/homebrew/bin/brew
-    set brew_prefix /opt/homebrew
-else if test -x /usr/local/bin/brew
-    set brew_prefix /usr/local
-end
-
-if test -n "$brew_prefix"
-    set -gx HOMEBREW_PREFIX $brew_prefix
-    set -gx HOMEBREW_CELLAR $brew_prefix/Cellar
-    set -gx HOMEBREW_REPOSITORY $brew_prefix
-
-    fish_add_path --path $brew_prefix/bin $brew_prefix/sbin
-
-    if test -d $brew_prefix/share/man
-        set -q MANPATH; or set MANPATH ''
-        contains -- $brew_prefix/share/man $MANPATH; or set -gx MANPATH $brew_prefix/share/man $MANPATH
-    end
-
-    if test -d $brew_prefix/share/info
-        set -q INFOPATH; or set INFOPATH ''
-        contains -- $brew_prefix/share/info $INFOPATH; or set -gx INFOPATH $brew_prefix/share/info $INFOPATH
-    end
-end
-
 ###################################
 # Interactive mode configurations #
 ###################################
